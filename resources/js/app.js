@@ -1,13 +1,20 @@
-require('./bootstrap');
-
+//import './bootstrap';
+import AdminLayout from '@/Layouts/Admin.vue'
 import { createApp, h } from 'vue'
-import { createInertiaApp } from '@inertiajs/inertia-vue3'
+import { createInertiaApp, Link } from '@inertiajs/inertia-vue3'
 
 createInertiaApp({
-	resolve: name => require(`./Pages/${name}`),
+	resolve: async name => {
+		let page = (await import(`./Pages/${name}.vue`)).default
+		if (page.layout === undefined) {
+			page.layout = AdminLayout
+		}
+		return page
+	},
 	setup({ el, App, props, plugin }) {
 		createApp({ render: () => h(App, props) })
 			.use(plugin)
+			.component("Link", Link)
 			.mount(el)
 	},
 })
