@@ -12,3 +12,15 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+
+.phpunit.result.cache
+.DS_Store
+composer.lock
+package-lock.json
+.idea/*
+
+public/js/app.js.LICENSE.txt
+public/js/app.js
+public/css/app.css.map
+public/css/app.css
+public/css/mix-manifest.json
