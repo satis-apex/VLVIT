@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     @routes
+    <script src="https://kit.fontawesome.com/8eec68ba41.js" crossorigin="anonymous"></script>
     {{ vite_assets() }}
     @inertiaHead
 </head>

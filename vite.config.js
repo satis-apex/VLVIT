@@ -11,6 +11,7 @@ export default ({ command }) => ({
 			input: [
 				'resources/js/app.js',
 				'resources/css/app.css',
+				'resources/css/custom.css',
 			]
 		},
 	},
