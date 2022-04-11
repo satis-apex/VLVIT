@@ -12,7 +12,7 @@ This repo is created to solve the hassle of the initial configuration for your F
 
 Clone the repository using git 
 ```bash
-git clone git@github.com:satis-apex/VLVIT.git
+git clone git@github.com:satis-apex/Vite-Laravel-Vue-Inertia-Tailwind.git
 
 ```
 
