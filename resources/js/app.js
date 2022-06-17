@@ -6,7 +6,10 @@ import { createInertiaApp, Link } from '@inertiajs/inertia-vue3'
 
 createInertiaApp({
 	resolve: async name => {
-		let page = (await import(`./Pages/${name}.vue`)).default
+		const comps = import.meta.glob('./Pages/**/*.vue');
+		const match = comps[`./Pages/${name}.vue`];
+		const page = (await match()).default;
+
 		if (page.layout === undefined) {
 			page.layout = AdminLayout
 		}
